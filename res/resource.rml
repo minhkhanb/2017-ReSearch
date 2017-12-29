@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceManager>
+  <FileInfo Version="1.1" />
+  <GFX>
+    <SupportVersions>
+      <Version Name="640_960" Width="640" Height="960" />
+      <Version Name="750_1334" Width="750" Height="1334" MainVersion="1" />
+      <Version Name="768_1024" Width="768" Height="1024" />
+      <Version Name="640_1136" Width="640" Height="1136" />
+    </SupportVersions>
+    <Packages>
+      <Package Name="font" />
+      <Package Name="object" />
+      <Package Name="bg" />
+      <Package Name="hud" />
+      <Package Name="char" />
+    </Packages>
+    <Items>
+      <Item Name="bg_loading" />
+      <Item Name="bg_ingame" />
+      <Item Name="font_score" />
+      <Item Name="font_bestscore" />
+      <Item Name="font_highscore" />
+      <Item Name="font_combo" />
+      <Item Name="font_combo_shadow" />
+      <Item Name="font_feverscore" />
+      <Item Name="char_duck_01" />
+      <Item Name="char_duck_fever" />
+      <Item Name="char_dog_01" />
+      <Item Name="objects_cloud" />
+      <Item Name="objects_props" />
+      <Item Name="objects_tree" />
+      <Item Name="objects_bullseye" />
+      <Item Name="objects_sun" />
+      <Item Name="objects_mounth" />
+      <Item Name="object_duck_fever_F" />
+      <Item Name="object_duck_fever_E" />
+      <Item Name="object_duck_fever_V" />
+      <Item Name="object_duck_fever_E2" />
+      <Item Name="object_duck_fever_R" />
+      <Item Name="tutorial_objects" />
+      <Item Name="hud_bar" />
+      <Item Name="hud_tittle" />
+      <Item Name="hud_resulf" />
+      <Item Name="hud_fever" />
+      <Item Name="hud_loading_icon" />
+    </Items>
+    <VersionItems>
+      <VersionItem Version="640_960" />
+      <VersionItem Version="750_1334">
+        <Item Item="font_score" Path="font_score_i6.bpine" Package="font" />
+        <Item Item="char_duck_01" Path="char_duck_i6.bpine" Package="char" />
+        <Item Item="bg_ingame" Path="bg_ingame_i6.bpine" Package="bg" />
+        <Item Item="hud_bar" Path="hud_bar_i6.bpine" Package="hud" />
+        <Item Item="objects_cloud" Path="objects_clouds_i6.bpine" Package="object" />
+        <Item Item="objects_props" Path="objects_props_i6.bpine" Package="object" />
+        <Item Item="objects_tree" Path="objects_tree_i6.bpine" Package="object" />
+        <Item Item="objects_bullseye" Path="objects_bulleye_i6.bpine" Package="object" />
+        <Item Item="char_dog_01" Path="char_dog_i6.bpine" Package="char" />
+        <Item Item="objects_sun" Path="objects_sun_i6.bpine" Package="object" />
+        <Item Item="objects_mounth" Path="objects_mounth_i6.bpine" Package="object" />
+        <Item Item="hud_tittle" Path="hud_tittle_i6.bpine" Package="hud" />
+        <Item Item="bg_loading" Path="bg_loading_i6.bpine" Package="bg" />
+        <Item Item="hud_resulf" Path="hud_resulf_i6.bpine" Package="hud" />
+        <Item Item="font_bestscore" Path="font_bestscore_i6.bpine" Package="font" />
+        <Item Item="font_highscore" Path="font_highscore_i6.bpine" Package="font" />
+        <Item Item="hud_fever" Path="hud_fever_i6.bpine" Package="hud" />
+        <Item Item="char_duck_fever" Path="char_duck_fever_i6.bpine" Package="char" />
+        <Item Item="font_combo" Path="font_combo_i6.bpine" Package="font" />
+        <Item Item="font_combo_shadow" Path="font_combo_shadow_i6.bpine" Package="font" />
+        <Item Item="object_duck_fever_F" Path="object_duck_fever_F_i6.bpine" Package="object" />
+        <Item Item="object_duck_fever_E" Path="object_duck_fever_E_i6.bpine" Package="object" />
+        <Item Item="object_duck_fever_V" Path="object_duck_fever_V_i6.bpine" Package="object" />
+        <Item Item="object_duck_fever_E2" Path="object_duck_fever_E2_i6.bpine" Package="object" />
+        <Item Item="object_duck_fever_R" Path="object_duck_fever_R_i6.bpine" Package="object" />
+        <Item Item="font_feverscore" Path="font_feverscore_i6.bpine" Package="font" />
+        <Item Item="hud_loading_icon" Path="hud_loading_icon_i6.bpine" Package="hud" />
+        <Item Item="tutorial_objects" Path="tutorial_objects_i6.bpine" Package="object" />
+      </VersionItem>
+      <VersionItem Version="768_1024" />
+      <VersionItem Version="640_1136" />
+    </VersionItems>
+  </GFX>
+  <Sounds>
+    <Sound Name="bgm_ingame" Path="bgm_ingame.mp3" />
+    <Sound Name="bgm_mainmenu" Path="bgm_mainmenu.mp3" />
+    <Sound Name="bgm_fever_mode" Path="bgm_fever_mode.mp3" />
+    <Sound Name="sfx_button" Path="sfx_button.wav" />
+    <Sound Name="sfx_endgame_with_highscore" Path="sfx_endgame_with_highscore.wav" />
+    <Sound Name="sfx_endgame_without_highscore" Path="sfx_endgame_without_highscore.wav" />
+    <Sound Name="sfx_ingame_highscrore" Path="sfx_ingame_highscrore.wav" />
+    <Sound Name="sfx_ready" Path="sfx_ready.wav" />
+    <Sound Name="sfx_reload" Path="sfx_reload.wav" />
+    <Sound Name="sfx_result_with_highscore" Path="sfx_result_with_highscore.wav" />
+    <Sound Name="sfx_result_without_highscore" Path="sfx_result_without_highscore.wav" />
+    <Sound Name="sfx_shoot" Path="sfx_shoot.wav" />
+    <Sound Name="sfx_snap" Path="sfx_snap.wav" />
+    <Sound Name="sfx_bonus_score_after_fever" Path="sfx_bonus_score_after_fever.wav" />
+    <Sound Name="sfx_collect_fever_character" Path="sfx_collect_fever_character.wav" />
+    <Sound Name="sfx_combo" Path="sfx_combo.wav" />
+    <Sound Name="sfx_fever_shoot" Path="sfx_fever_shoot.wav" />
+  </Sounds>
+  <ProjectSettings>
+    <ResourceManifestHeader><![CDATA[./../src/game/Define]]></ResourceManifestHeader>
+    <ResourceManifestCPP><![CDATA[./../src/game/GamePlay]]></ResourceManifestCPP>
+  </ProjectSettings>
+  <Targets>
+    <Target Name="Simulator" AddNoise="1" GroupSFX="1">
+      <ResourceDirectory><![CDATA[./../_tmpres]]></ResourceDirectory>
+      <OutputDirectory><![CDATA[./../bin/res]]></OutputDirectory>
+      <Versions>
+        <Version Name="640_960" />
+        <Version Name="750_1334" />
+        <Version Name="768_1024" />
+        <Version Name="640_1136" />
+      </Versions>
+    </Target>
+    <Target Name="IOS" AddNoise="1" GroupSFX="1">
+      <ResourceDirectory><![CDATA[./../_tmpres]]></ResourceDirectory>
+      <OutputDirectory><![CDATA[./../bin/Res_IOS]]></OutputDirectory>
+      <Versions>
+        <Version Name="640_960" />
+        <Version Name="750_1334" />
+        <Version Name="768_1024" />
+        <Version Name="640_1136" />
+      </Versions>
+    </Target>
+  </Targets>
+</ResourceManager>

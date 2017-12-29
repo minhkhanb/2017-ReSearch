@@ -1,0 +1,26 @@
+IF NOT DEFINED CONFIG_FLAG ( goto CONFIG ) else ( goto NONEEDCONFIG )
+:CONFIG
+::##############################################
+set JAVA_HOME=C:\DevTools\Java\jdk1.7.0_45
+set ANDROID_SDK=C:\DevTools\Android\android-sdk
+set ANT_APACHE=C:\DevTools\apache-ant-1.9.3
+set ANDROID_NDK=C:\DevTools\Android\android-ndk-r9c
+set path=%path%;%JAVA_HOME%;%ANDROID_SDK%\tools;%ANDROID_SDK%\platform-tools;%ANT_APACHE%\bin;%ANDROID_NDK%;
+
+set PROJECT_DIR=%CD%
+set RESOURCE_DIR=%PROJECT_DIR%\..\..\res
+
+set BUILD_DIR=%CD%
+set BUILD_RES_DIR=%BUILD_DIR%\res\raw
+::###############################################
+:ODATA CLASS GENERATION
+set	RESTLET_LIB=C:/DevTools/restlet_jse_2_2_1/lib
+set FREE_MAKER_LIB=C:\DevTools\freemarker-2.3.20
+
+::###############################################
+set CONFIG_FLAG=1
+goto CONFIG_END
+:NONEEDCONFIG
+echo NO NEED CONFIG
+echo config flag: %CONFIG_FLAG%
+:CONFIG_END

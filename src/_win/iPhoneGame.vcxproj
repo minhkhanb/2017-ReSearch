@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8BE22EDA-B385-4E93-B7AC-88493A668D93}</ProjectGuid>
+    <RootNamespace>iPhoneGame</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\bin\_win</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\bin\_win</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>./;./src;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>./;./src;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\tools\Bass;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;OpenAL32.lib;OGLESTools.lib;libgles_cl.lib;libgles_cm.lib;winmm.lib;WS2_32.lib;Winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\tools;..\..\src\lib\Sound\;..\..\tools\OpenGL_ES\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\tools\Bass;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>bass.lib;opengl32.lib;glu32.lib;OpenAL32.lib;OGLESTools.lib;libgles_cl.lib;bass.lib;libgles_cm.lib;winmm.lib;WS2_32.lib;Winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\tools;..\..\src\lib\Sound\;..\..\tools\OpenGL_ES\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\game\GameCore\Animation.cpp" />
+    <ClCompile Include="..\game\GameCore\CAnimObject.cpp" />
+    <ClCompile Include="..\game\GameCore\CGame_Core.cpp" />
+    <ClCompile Include="..\game\GameCore\CTouch.cpp" />
+    <ClCompile Include="..\game\GameCore\Device.cpp" />
+    <ClCompile Include="..\game\GameCore\GameContext.cpp" />
+    <ClCompile Include="..\game\GameCore\GameFlatform.cpp" />
+    <ClCompile Include="..\game\GameCore\GameRect.cpp" />
+    <ClCompile Include="..\game\GameCore\Object.cpp" />
+    <ClCompile Include="..\game\GameCore\PineGame.cpp" />
+    <ClCompile Include="..\game\GameCore\RenderObject.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CBackGround.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CCloud.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CDuck.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CEffectManager.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CGamePlay.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CScrollBar.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CStringNumber.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CTree.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\CUser.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\Design_Util.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\GDS_Exporter.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\Pine_Date_Time.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameState\CGame_State_Game_Play.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameState\CGame_State_Main_Menu.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameState\CGame_State_Setting.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameState\CGame_State_Store.cpp" />
+    <ClCompile Include="..\game\GamePlay\Game_ExternFunctions.cpp" />
+    <ClCompile Include="..\game\Lib\DataType\BufferStream.cpp" />
+    <ClCompile Include="..\game\Lib\DataType\ServiceStream.cpp" />
+    <ClCompile Include="..\game\Lib\HUD\ButtonAnimation.cpp" />
+    <ClCompile Include="..\game\Lib\MapDesigner\MapDesigner.cpp" />
+    <ClCompile Include="..\game\Lib\Math\PinePolygon.cpp" />
+    <ClCompile Include="..\game\Lib\Math\SMatrix4x4.cpp" />
+    <ClCompile Include="..\game\Lib\OpenGLES\GLESLib1.cpp" />
+    <ClCompile Include="..\game\Lib\OpenGLES\Graphic.cpp" />
+    <ClCompile Include="..\game\Lib\PineAdBox.cpp" />
+    <ClCompile Include="..\game\Lib\PineADVERT.cpp" />
+    <ClCompile Include="..\game\Lib\PineFacebookController.cpp" />
+    <ClCompile Include="..\game\Lib\PineGameCenterController.cpp" />
+    <ClCompile Include="..\game\Lib\PineHighScore.cpp" />
+    <ClCompile Include="..\game\Lib\PineSocial.cpp" />
+    <ClCompile Include="..\game\Lib\Sound\BassLib.cpp" />
+    <ClCompile Include="..\game\Lib\Sound\SoundEngine.cpp" />
+    <ClCompile Include="..\game\MainGame\ShakeDuckOffGame.cpp" />
+    <ClCompile Include="src\iPhoneGame.cpp" />
+    <ClCompile Include="src\Os_Functions.cpp" />
+    <ClCompile Include="src\Os_Functions_NotSupported.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Thread.cpp" />
+    <ClCompile Include="..\game\GamePlay\CGame_State.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameState\CGame_State_Logo.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\MenuSystem.cpp" />
+    <ClCompile Include="..\game\GamePlay\GameObject\SpriteList.cpp" />
+    <ClCompile Include="..\game\Lib\ArrayList\ArrayList.cpp" />
+    <ClCompile Include="..\game\Lib\Math\CMath.cpp" />
+    <ClCompile Include="..\game\Lib\Sprite\CSprite.cpp" />
+    <ClCompile Include="..\game\Lib\PineImage.cpp" />
+    <ClCompile Include="..\game\Lib\DataInputStream\DataInputStream.cpp" />
+    <ClCompile Include="..\game\Lib\png\lodepng.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\game\Define\Define_Simulator.h" />
+    <ClInclude Include="..\game\Define\EngineDefines\EngineDefines.h" />
+    <ClInclude Include="..\game\GameCore\Animation.h" />
+    <ClInclude Include="..\game\GameCore\CType.h" />
+    <ClInclude Include="..\game\GameCore\GameContext.h" />
+    <ClInclude Include="..\game\GameCore\GameFlatform.h" />
+    <ClInclude Include="..\game\GameCore\GameRect.h" />
+    <ClInclude Include="..\game\GameCore\Object.h" />
+    <ClInclude Include="..\game\GameCore\Os_Functions.h" />
+    <ClInclude Include="..\game\GameCore\PineGame.h" />
+    <ClInclude Include="..\game\GameCore\RenderObject.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CBackGround.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CCloud.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CDuck.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CEffectManager.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CGamePlay.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CScrollBar.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CStringNumber.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CTree.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\CUser.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\Design_Util.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\GDS_Exporter.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\GDS_Parameter.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\MenuSystem.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\Pine_Date_Time.h" />
+    <ClInclude Include="..\game\GamePlay\GameObject\SpriteList.h" />
+    <ClInclude Include="..\game\GamePlay\GameState\CGame_State.h" />
+    <ClInclude Include="..\game\GamePlay\GameState\CGame_State_Game_Play.h" />
+    <ClInclude Include="..\game\GamePlay\GameState\CGame_State_Logo.h" />
+    <ClInclude Include="..\game\GamePlay\GameState\CGame_State_Main_Menu.h" />
+    <ClInclude Include="..\game\GamePlay\GameState\CGame_State_Setting.h" />
+    <ClInclude Include="..\game\GamePlay\GameState\CGame_State_Store.h" />
+    <ClInclude Include="..\game\GamePlay\Game_ExternFunctions.h" />
+    <ClInclude Include="..\game\Lib\ArrayList\ArrayList.h" />
+    <ClInclude Include="..\game\Lib\DataType\BufferStream.h" />
+    <ClInclude Include="..\game\Lib\DataType\CType.h" />
+    <ClInclude Include="..\game\Lib\DataType\ServiceStream.h" />
+    <ClInclude Include="..\game\Lib\HUD\ButtonAnimation.h" />
+    <ClInclude Include="..\game\Lib\MapDesigner\MapDesigner.h" />
+    <ClInclude Include="..\game\Lib\Math\CMath.h" />
+    <ClInclude Include="..\game\Lib\Math\PinePolygon.h" />
+    <ClInclude Include="..\game\Lib\Math\SMatrix4x4.h" />
+    <ClInclude Include="..\game\Lib\OpenGLES\GLESLib1.h" />
+    <ClInclude Include="..\game\Lib\OpenGLES\Graphic.h" />
+    <ClInclude Include="..\game\Lib\PineAdBox.h" />
+    <ClInclude Include="..\game\Lib\PineADVERT.h" />
+    <ClInclude Include="..\game\Lib\PineFacebookController.h" />
+    <ClInclude Include="..\game\Lib\PineGameCenterController.h" />
+    <ClInclude Include="..\game\Lib\PineHighScore.h" />
+    <ClInclude Include="..\game\Lib\PineSocial.h" />
+    <ClInclude Include="..\game\Lib\ReadFile\ReadFile.h" />
+    <ClInclude Include="..\game\Lib\Sound\BassLib.h" />
+    <ClInclude Include="..\game\Lib\Sound\SoundEngine.h" />
+    <ClInclude Include="..\game\Lib\Sprite\CSprite.h" />
+    <ClInclude Include="..\game\Lib\PineImage.h" />
+    <ClInclude Include="..\game\Lib\DataInputStream\DataInputStream.h" />
+    <ClInclude Include="..\game\Lib\png\lodepng.h" />
+    <ClInclude Include="..\game\GameCore\CAnimObject.h" />
+    <ClInclude Include="..\game\GameCore\CGame.h" />
+    <ClInclude Include="..\game\GamePlay\CGame_include_ex.h" />
+    <ClInclude Include="..\game\GamePlay\CGame_prototype_ex.h" />
+    <ClInclude Include="..\game\GameCore\CTouch.h" />
+    <ClInclude Include="..\game\Define\Define_Const.h" />
+    <ClInclude Include="..\game\Define\Define_Misc.h" />
+    <ClInclude Include="..\game\Define\Define_Platform.h" />
+    <ClInclude Include="..\game\Define\Define_TypeAndMacro.h" />
+    <ClInclude Include="..\game\Define\Defines.h" />
+    <ClInclude Include="..\game\MainGame\ShakeDuckOffGame.h" />
+    <ClInclude Include="src\bass.h" />
+    <ClInclude Include="src\iPhoneGame.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="src\Thread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iPhoneGame.ico" />
+    <None Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="iPhoneGame.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="src\bass.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
